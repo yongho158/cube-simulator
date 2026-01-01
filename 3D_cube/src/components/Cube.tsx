@@ -193,8 +193,10 @@ export default function Cube() {
                 // Back View: Top face moves Right.
                 // So for Back/Left quadrants, we might want to invert dir to keep 'A' moving 'Left'.
 
-                let effectiveDir = dir
-                if (quadrant === 2 || quadrant === 3) effectiveDir = -dir as Direction // Flip for Back/Left views? Test needed.
+                // User requested unified "Right" rotation for horizontal lines.
+                // Default 'dir' is 1. We want -1 for Right.
+                // A global -Y rotation (Clockwise from top) looks like "Right" from all sides.
+                let effectiveDir = -dir as Direction
 
                 let yIndex = 0
                 if (visualRow === 'top') yIndex = 1

@@ -18,11 +18,7 @@ dist-ssr
 .idea
 .DS_Store
 *.suo
-*.ntvs
+*.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-# Ignore other projects
-roulette_game/
-python/
